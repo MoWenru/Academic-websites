@@ -23,7 +23,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold text-[#2C3E50]">
-            {language === "zh" ? "张教授" : "Prof. Zhang"}
+            {language === "zh" ? "莫雯茹教授" : "Prof. Mo Wenru"}
           </Link>
         </div>
 
@@ -40,9 +40,6 @@ export default function Header() {
           </Link>
           <Link href="/cv" className="text-[#34495E] hover:text-[#E67E22]">
             {t("nav.cv")}
-          </Link>
-          <Link href="/blog" className="text-[#34495E] hover:text-[#E67E22]">
-            {t("nav.blog")}
           </Link>
           <Link href="#contact" className="text-[#34495E] hover:text-[#E67E22]">
             {t("nav.contact")}
@@ -96,13 +93,6 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.cv")}
-            </Link>
-            <Link
-              href="/blog"
-              className="block py-2 text-[#34495E] hover:text-[#E67E22]"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t("nav.blog")}
             </Link>
             <Link
               href="#contact"

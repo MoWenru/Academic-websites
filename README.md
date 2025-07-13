@@ -2,6 +2,10 @@
 
 这是一个基于 Next.js 构建的现代化学术个人主页，支持中英文切换和响应式设计。
 
+本地访问
+
+[本地网站](http://localhost:3000/Academic-websites/#research))
+
 ## 功能特点
 
 - 🌐 中英文双语支持

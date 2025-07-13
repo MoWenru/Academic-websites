@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useLanguage } from "./language-provider"
 import { Mail, Github, Linkedin, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 
 export default function ProfileSection() {
   const { t } = useLanguage()
@@ -22,10 +23,10 @@ export default function ProfileSection() {
               priority
             />
           </div>
-          <h1 className="text-3xl font-bold text-[#2C3E50] dark:text-white">{t("profile.position")}</h1>
-          <p className="text-[#7F8C8D] dark:text-gray-400">数值模拟研究组 | Numerical Simulation Research Group</p>
+          <h1 className="text-3xl font-bold text-[#2C3E50] dark:text-white">{t("profile.name")}</h1>
+          <p className="text-[#7F8C8D] dark:text-gray-400">{t("profile.position")}</p>
           <p className="text-[#7F8C8D] dark:text-gray-400">
-            计算科学与工程学院 | School of Computational Science and Engineering
+            {t("profile.group")} | {t("profile.school")}
           </p>
           <div className="flex space-x-3 mt-4">
             <Button variant="outline" size="icon" aria-label="Email">
@@ -50,59 +51,31 @@ export default function ProfileSection() {
             <p className="text-[#34495E] dark:text-gray-300 leading-relaxed">{t("profile.intro3")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[#2C3E50] dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
-                {t("research.title")}
-              </h2>
-              <ul className="list-disc list-inside space-y-2 text-[#34495E] dark:text-gray-300">
-                <li>{t("research.item1")}</li>
-                <li>{t("research.item2")}</li>
-                <li>{t("research.item3")}</li>
-                <li>{t("research.item4")}</li>
-                <li>{t("research.item5")}</li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[#2C3E50] dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
-                {t("education.title")}
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="mt-1 mr-4 bg-[#2C3E50] dark:bg-[#E67E22] rounded-full p-1">
-                    <BookOpen className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#34495E] dark:text-gray-300">
-                      Dr.-Ing. in Computational Engineering Science, 2017
-                    </p>
-                    <p className="text-[#7F8C8D] dark:text-gray-400">RWTH Aachen University, Germany</p>
-                  </div>
+          <Tabs defaultValue="education" className="w-full mt-4">
+            <TabsList>
+              <TabsTrigger value="education">{t("education.title") || "教育背景"}</TabsTrigger>
+            </TabsList>
+            <TabsContent value="education">
+              <div className="space-y-4 mt-4">
+                <div>
+                  <h3 className="font-medium text-[#34495E]">{t("education.1.period")} {t("education.1.school")}</h3>
+                  <p className="text-[#7F8C8D]">{t("education.1.degree")} | {t("education.1.gpa")}</p>
+                  <p className="text-[#34495E] mt-1">{t("education.1.courses")}</p>
+                  <p className="text-[#34495E] mt-1">{t("education.1.paper")}</p>
                 </div>
-                <div className="flex items-start">
-                  <div className="mt-1 mr-4 bg-[#2C3E50] dark:bg-[#E67E22] rounded-full p-1">
-                    <BookOpen className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#34495E] dark:text-gray-300">
-                      Dipl.-Ing. in Aerospace Engineering, 2011
-                    </p>
-                    <p className="text-[#7F8C8D] dark:text-gray-400">University of Stuttgart, Germany</p>
-                  </div>
+                <div>
+                  <h3 className="font-medium text-[#34495E]">{t("education.2.period")} {t("education.2.school")}</h3>
+                  <p className="text-[#7F8C8D]">{t("education.2.degree")} | {t("education.2.gpa")}</p>
+                  <p className="text-[#34495E] mt-1">{t("education.2.courses")}</p>
                 </div>
-                <div className="flex items-start">
-                  <div className="mt-1 mr-4 bg-[#2C3E50] dark:bg-[#E67E22] rounded-full p-1">
-                    <BookOpen className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#34495E] dark:text-gray-300">MS in Aerospace Engineering, 2010</p>
-                    <p className="text-[#7F8C8D] dark:text-gray-400">Georgia Institute of Technology, USA</p>
-                  </div>
+                <div>
+                  <h3 className="font-medium text-[#34495E]">{t("education.3.period")} {t("education.3.school")}</h3>
+                  <p className="text-[#7F8C8D]">{t("education.3.degree")}</p>
+                  <p className="text-[#34495E] mt-1">{t("education.3.courses")}</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </section>
