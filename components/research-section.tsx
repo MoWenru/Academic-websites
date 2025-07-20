@@ -50,13 +50,13 @@ export default function ResearchSection() {
 
       <div className="mb-8">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid grid-cols-3 md:grid-cols-6 mb-8">
+          <TabsList className="grid grid-cols-3 md:grid-cols-3 mb-8">
             <TabsTrigger value="overview">{t("research.overview")}</TabsTrigger>
             <TabsTrigger value="timeline">{t("research.timeline")}</TabsTrigger>
             <TabsTrigger value="projects">{t("research.projects")}</TabsTrigger>
-            <TabsTrigger value="collaborations">{t("research.collaborations")}</TabsTrigger>
-            <TabsTrigger value="funding">{t("research.funding")}</TabsTrigger>
-            <TabsTrigger value="impact">{t("research.impact")}</TabsTrigger>
+            {/* <TabsTrigger value="collaborations">{t("research.collaborations")}</TabsTrigger> */}
+            {/* <TabsTrigger value="funding">{t("research.funding")}</TabsTrigger> */}
+            {/* <TabsTrigger value="impact">{t("research.impact")}</TabsTrigger> */}
           </TabsList>
 
           <TabsContent value="overview">
@@ -221,7 +221,7 @@ export default function ResearchSection() {
             </div>
           </TabsContent>
 
-          <TabsContent value="collaborations">
+          {/* <TabsContent value="collaborations">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="flex flex-col items-center">
                 <div className="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-4">
@@ -257,9 +257,9 @@ export default function ResearchSection() {
                 </p>
               </div>
             </div>
-          </TabsContent>
+          </TabsContent> */}
 
-          <TabsContent value="funding">
+          {/* <TabsContent value="funding">
             <div className="space-y-6">
               <Card>
                 <CardHeader>
@@ -289,9 +289,9 @@ export default function ResearchSection() {
                 </CardContent>
               </Card>
             </div>
-          </TabsContent>
+          </TabsContent> */}
 
-          <TabsContent value="impact">
+          {/* <TabsContent value="impact">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="text-center">
                 <CardHeader>
@@ -322,7 +322,7 @@ export default function ResearchSection() {
                 </CardContent>
               </Card>
             </div>
-          </TabsContent>
+          </TabsContent> */}
         </Tabs>
       </div>
     </section>
