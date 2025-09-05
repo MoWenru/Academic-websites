@@ -23,7 +23,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold text-[#2C3E50]">
-            {language === "zh" ? "莫雯茹教授" : "Prof. Mo Wenru"}
+            {language === "zh" ? "莫雯茹女士" : "Ms. Mo Wenru"}
           </Link>
         </div>
 
